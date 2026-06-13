@@ -2436,12 +2436,11 @@ p {
 
   .category-filter {
     justify-content: flex-start;
-    overflow-x: auto;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     padding-bottom: 12px;
-    -webkit-overflow-scrolling: touch;
-    margin: 0 -20px; /* Bleed edge */
-    padding: 0 20px 12px;
+    margin: 0; 
+    padding: 0 0 12px 0;
+    gap: 8px;
   }
 
   .category-pill {
