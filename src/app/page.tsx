@@ -17,9 +17,11 @@ export default function HomePage() {
   const [settings, setSettings] = useState<any>(null);
   const [products, setProducts] = useState<any[]>(sampleProducts);
   const [isUpdating, setIsUpdating] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
 
   // Fetch rates, settings, and products on mount
   useEffect(() => {
+    setIsMounted(true);
     fetchRates();
     fetch('/api/settings', { cache: 'no-store' })
       .then(res => res.json())
@@ -151,7 +153,11 @@ export default function HomePage() {
               </RevealOnScroll>
             </div>
             <RevealOnScroll>
-              <p className="rates-updated">Last updated: {new Date(currentRates.lastUpdated || Date.now()).toLocaleString('en-IN', { day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' })}</p>
+              <p className="rates-updated">
+                {isMounted 
+                  ? `Last updated: ${new Date(currentRates.lastUpdated || Date.now()).toLocaleString('en-IN', { day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' })}` 
+                  : 'Last updated: ...'}
+              </p>
             </RevealOnScroll>
           </div>
         </section>
