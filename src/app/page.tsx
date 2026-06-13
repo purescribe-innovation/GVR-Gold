@@ -264,25 +264,18 @@ export default function HomePage() {
             </RevealOnScroll>
             <RevealOnScroll animation="fadeRight">
               <div className="about-preview-visual">
-                <div style={{ position: 'relative', width: '100%', height: '100%', minHeight: '400px', borderRadius: 'var(--radius-lg)', overflow: 'hidden' }}>
-                  <img 
-                    src="/images/craftsmanship.png" 
-                    alt="Master jeweler crafting" 
-                    style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
-                  />
-                  <div className="about-visual-card">
-                    <div className="about-visual-stat">
-                      <span className="about-stat-number text-gold-gradient">30+</span>
-                      <span className="about-stat-label">Years of Excellence</span>
-                    </div>
-                    <div className="about-visual-stat">
-                      <span className="about-stat-number text-gold-gradient">50K+</span>
-                      <span className="about-stat-label">Happy Customers</span>
-                    </div>
-                    <div className="about-visual-stat">
-                      <span className="about-stat-number text-gold-gradient">10K+</span>
-                      <span className="about-stat-label">Unique Designs</span>
-                    </div>
+                <div className="about-visual-card">
+                  <div className="about-visual-stat">
+                    <span className="about-stat-number text-gold-gradient">30+</span>
+                    <span className="about-stat-label">Years of Excellence</span>
+                  </div>
+                  <div className="about-visual-stat">
+                    <span className="about-stat-number text-gold-gradient">50K+</span>
+                    <span className="about-stat-label">Happy Customers</span>
+                  </div>
+                  <div className="about-visual-stat">
+                    <span className="about-stat-number text-gold-gradient">10K+</span>
+                    <span className="about-stat-label">Unique Designs</span>
                   </div>
                 </div>
               </div>

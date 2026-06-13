@@ -2847,15 +2847,13 @@ a:focus-visible {
   backdrop-filter: blur(10px);
   border: var(--border-gold);
   border-radius: var(--border-radius-lg);
-  padding: 32px 40px;
+  padding: 40px;
   display: flex;
   flex-direction: column;
   gap: 32px;
-  width: calc(100% - 40px);
-  max-width: 380px;
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
   overflow: hidden;
 }
 
@@ -3292,13 +3290,9 @@ a:focus-visible {
   }
 
   .about-visual-card {
-    position: relative;
     width: 100%;
     max-width: 100%;
-    bottom: auto;
-    right: auto;
-    margin-top: -60px; /* Slight overlap instead of floating inside */
-    z-index: 2;
+    margin-top: 0; 
   }
   
   .product-detail-grid {
