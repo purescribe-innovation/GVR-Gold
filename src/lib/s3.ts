@@ -19,16 +19,12 @@ function getS3Client(): S3Client {
   if (!s3Client) {
     s3Client = new S3Client({
       region: process.env.S3_REGION || 'ap-south-1',
-      credentials: {
-        accessKeyId: process.env.S3_ACCESS_KEY_ID || '',
-        secretAccessKey: process.env.S3_SECRET_ACCESS_KEY || '',
-      },
     });
   }
   return s3Client;
 }
 
-const BUCKET = process.env.AWS_S3_BUCKET_NAME || process.env.S3_BUCKET_NAME || 'gvr-gold-silver';
+const BUCKET = process.env.AWS_S3_BUCKET_NAME || process.env.S3_BUCKET_NAME || 'gvr-gold';
 
 // ─── Generic S3 Helpers ────────────────────────────────────
 
