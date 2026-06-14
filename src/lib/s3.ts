@@ -229,7 +229,7 @@ export async function uploadImage(
     ContentType: contentType,
   });
   await client.send(command);
-  return `https://${BUCKET}.s3.${process.env.AWS_REGION || 'ap-south-1'}.amazonaws.com/${key}`;
+  return `https://${BUCKET}.s3.${process.env.S3_REGION || 'ap-south-1'}.amazonaws.com/${key}`;
 }
 
 export async function deleteImage(key: string): Promise<void> {
